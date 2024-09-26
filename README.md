@@ -1,59 +1,87 @@
-Layoffs Analysis: High Layoffs vs. Funds Raised
-Table of Contents
-Introduction
-Dataset Overview
-Methodology
-Key Findings
-Companies with High Layoffs vs. Funds Raised
-Industry Insights
-Impact of Company Stage
-Geographical Trends
-Conclusion
-Further Exploration
-Introduction
-The purpose of this analysis is to explore the relationship between layoffs and the amount of funding raised by companies across different industries and countries. We aim to determine whether companies that raised significant amounts of capital were able to avoid layoffs or whether there are patterns of layoffs within specific industries, company stages, or geographical regions.
+# Layoffs-Analysis: Exploring the Impact of Company Layoffs vs. Funds Raised
 
-Dataset Overview
-The dataset used in this analysis contains records of layoffs from companies worldwide, with the following key fields:
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Dataset Overview](#dataset-overview)
+3. [Methodology](#methodology)
+4. [Key Findings](#key-findings)
+    - Companies with High Layoffs vs. Funds Raised
+    - Industry Insights
+    - Impact of Company Stage
+    - Geographical Trends
+5. [Conclusion](#conclusion)
+6. [Further Exploration](#further-exploration)
 
-Company: The name of the company.
-Location: Headquarters of the company.
-Industry: Sector in which the company operates.
-Total Laid Off: Number of employees laid off.
-Percentage Laid Off: Percentage of the workforce laid off.
-Funds Raised: Total funds raised by the company (in millions).
-Stage: Company's stage (e.g., Series B, Post-IPO).
-Country: Country where the company is based.
-Methodology
-The analysis was conducted using a combination of SQL queries and data manipulation techniques. The following steps were taken:
+---
 
-Data Cleaning: Duplicates were removed, null values were handled, and data was standardized (e.g., trimming company names, formatting dates).
-Exploratory Data Analysis: SQL queries were used to identify key trends in layoffs vs. funds raised, and data was grouped by company, industry, stage, and country for further insights.
-Visualization: Key findings were visualized using charts (e.g., bar graphs, line plots) to better understand the relationship between layoffs and other variables.
-Key Findings
-1. Companies with High Layoffs vs. Funds Raised
-This section focuses on companies that laid off a significant number of employees despite raising large amounts of capital:
+## Introduction
 
-Company	Total Laid Off	Funds Raised (in Millions)	Industry	Country	Stage
-Company A	X employees	Y million	Tech	USA	Series B
-Company B	X employees	Y million	Retail	UK	Post-IPO
-2. Industry Insights
-Certain industries, especially Technology and Real Estate, showed higher layoffs despite large amounts of funding raised. Companies in these sectors often face scaling challenges, leading to workforce reductions despite capital availability.
+This project analyzes the relationship between company layoffs and the amount of funding raised across various industries and countries. It aims to uncover trends, such as whether companies that raised significant funds managed to avoid layoffs, and how different factors like industry or company stage impact layoffs.
 
-3. Impact of Company Stage
-Series B: Startups in this stage experienced moderate layoffs. Despite substantial funding, companies still laid off a significant percentage of their workforce.
-Post-IPO: Companies in the post-IPO stage had larger layoffs, likely due to pressures from investors and the market to achieve profitability.
-4. Geographical Trends
-Layoffs varied by region:
+---
 
-USA: Most layoffs were concentrated in the technology sector.
-Europe: Countries like the UK and Germany saw layoffs in both retail and media sectors.
-Conclusion
-The analysis reveals that high levels of funding do not always shield companies from layoffs. While factors such as industry and company stage play a significant role, external market forces, such as economic downturns and the need for profitability, often override the availability of capital.
+## Dataset Overview
 
-Further Exploration
-Future analyses could explore:
+The dataset used in this analysis contains records of layoffs from companies worldwide, including the following key fields:
+- **Company**: Name of the company.
+- **Location**: Headquarters of the company.
+- **Industry**: Sector in which the company operates.
+- **Total Laid Off**: Number of employees laid off.
+- **Percentage Laid Off**: Percentage of the total workforce laid off.
+- **Funds Raised**: Total funds raised by the company (in millions).
+- **Stage**: Company's stage (e.g., Series B, Post-IPO).
+- **Country**: Country where the company is located.
 
-Layoffs by Employee Role: Identifying which roles or departments are most affected during layoffs.
-Temporal Trends: Examining how layoffs correlate with economic events or market conditions.
-Startup Ecosystem: Investigating how early-stage startups handle layoffs compared to mature companies.
+You can find the dataset in the [`data/layoffs.csv`](data/layoffs.csv) file.
+
+---
+
+## Methodology
+
+The analysis was conducted using SQL queries and data manipulation techniques:
+1. **Data Cleaning**: Removal of duplicates, handling missing values, and standardizing data (e.g., trimming company names and formatting dates).
+2. **Exploratory Data Analysis**: SQL queries were used to explore trends in layoffs vs. funds raised, and data was grouped by company, industry, stage, and country.
+3. **Visualization**: Key findings were visualized using charts to show the relationship between layoffs and other variables.
+
+---
+
+## Key Findings
+
+### 1. Companies with High Layoffs vs. Funds Raised
+The following companies experienced significant layoffs despite raising large amounts of capital:
+| **Company** | **Total Laid Off** | **Funds Raised (in Millions)** | **Industry** | **Country** | **Stage** |
+|-------------|--------------------|-------------------------------|--------------|-------------|-----------|
+| Company A   | X employees         | Y million                     | Tech         | USA         | Series B  |
+| Company B   | X employees         | Y million                     | Retail       | UK          | Post-IPO  |
+
+### 2. Industry Insights
+- **Technology** and **Real Estate** were the industries most affected by layoffs despite their companies raising substantial funds.
+
+### 3. Impact of Company Stage
+- **Series B** startups experienced moderate layoffs, indicating that even well-funded early-stage companies faced workforce reductions.
+- **Post-IPO** companies, despite having raised large amounts of capital, experienced the highest percentage of layoffs, likely due to market pressures.
+
+### 4. Geographical Trends
+- **USA**: The largest concentration of layoffs was in the technology sector.
+- **Europe**: Significant layoffs occurred in retail and media industries in countries like the UK and Germany.
+
+---
+
+## Conclusion
+
+This analysis reveals that high fundraising does not guarantee protection from layoffs. Factors such as industry, company stage, and external market forces (e.g., economic conditions) heavily influence workforce reductions, regardless of available capital.
+
+---
+
+## Further Exploration
+
+Potential areas for further analysis:
+- **Layoffs by Department or Role**: Analyze which departments are most impacted during layoffs.
+- **Longitudinal Trends**: Explore layoffs over time in relation to economic events.
+- **Startup vs. Mature Companies**: Compare layoffs in early-stage startups vs. established firms to see if size and maturity affect layoff rates.
+
+---
+
+## Dataset
+
+The dataset used for this analysis can be found in the [`data/layoffs.csv`](data/layoffs.csv) file. It contains detailed information on layoffs across companies worldwide, including industry, location, total laid off, and funds raised.
